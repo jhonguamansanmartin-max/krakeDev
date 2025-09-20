@@ -1,11 +1,4 @@
-recuperartexto=function(idComponente){
-    let Componente
-    let valoringresado
-    Componente=document.getElementById(idComponente);
-    valoringresado=Componente.value
-    return valoringresado
 
-}
 saludar=function(){
     //recuperar el valor de la caja de texto 
     let nombre=recuperartexto("txtnombre");
@@ -22,31 +15,4 @@ saludar=function(){
    mostrarimagen("imagen","./imagen/saludar.gif")
 
    mostrarTextoEnCaja("txtnombre","")
-}
-recuperarint=function(idComponente){
-    let valorcaja=recuperartexto(idComponente);
-    let valorentero=parseInt(valorcaja);
-    return valorentero;
-
-}
-recuperarfloat=function(idComponente){
-    let valorcaja= recuperartexto(idComponente);
-    let valorflotante= parseFloat(valorcaja);
-    return valorflotante;
-
-}
-mostrartexto=function(idComponente,mensaje){
-    let Componente=document.getElementById(idComponente);
-    Componente.innerText = mensaje;
-    
-}
-
-mostrarimagen=function(idComponente,rutaimagen){
-    let imagen=document.getElementById(idComponente)
-    imagen.src = rutaimagen
-}
-
-mostrarTextoEnCaja=function(idComponente,mensaje){
-     let Componente=document.getElementById(idComponente);
-    Componente.value = mensaje;
 }

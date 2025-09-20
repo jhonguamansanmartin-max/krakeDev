@@ -19,6 +19,8 @@ saludar=function(){
    let mensajebienvenida="Bienvenido" +nombre+ "" +apellido;
     mostrartexto("lblresultado",mensajebienvenida)
 
+   mostrarimagen("imagen","./imagen/saludar.gif")
+
 }
 recuperarint=function(idComponente){
     let valorcaja=recuperartexto(idComponente);
@@ -36,4 +38,9 @@ mostrartexto=function(idComponente,mensaje){
     let Componente=document.getElementById(idComponente);
     Componente.innerText = mensaje;
     
+}
+
+mostrarimagen=function(idComponente,rutaimagen){
+    let imagen=document.getElementById(idComponente)
+    imagen.src = rutaimagen
 }

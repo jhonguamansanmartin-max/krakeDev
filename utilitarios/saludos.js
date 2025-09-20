@@ -21,6 +21,7 @@ saludar=function(){
 
    mostrarimagen("imagen","./imagen/saludar.gif")
 
+   mostrarTextoEnCaja("txtnombre","")
 }
 recuperarint=function(idComponente){
     let valorcaja=recuperartexto(idComponente);
@@ -43,4 +44,9 @@ mostrartexto=function(idComponente,mensaje){
 mostrarimagen=function(idComponente,rutaimagen){
     let imagen=document.getElementById(idComponente)
     imagen.src = rutaimagen
+}
+
+mostrarTextoEnCaja=function(idComponente,mensaje){
+     let Componente=document.getElementById(idComponente);
+    Componente.value = mensaje;
 }

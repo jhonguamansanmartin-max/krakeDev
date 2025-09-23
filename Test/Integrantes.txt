@@ -1,0 +1,14 @@
+Nombre del equipo: krakEnD
+
+integrantes:
+ Hancel Espin integrante numero N° 1
+	Le gustan los videojuegos 
+
+
+ Jhon Guaman integrante numero N° 2
+	Me gustan, las artes marciales mixtas(mma) y las compuadoras.
+
+ Karen Avila integrante numero N° 3
+	Me gustan las actividades extremas y disfruto aprender cosas nuevas.
+	
+ 

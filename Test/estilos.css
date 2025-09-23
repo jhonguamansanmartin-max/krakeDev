@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+    background-image: url("images.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*.etiquetas{
+    background-color: rgb(107, 107, 229);
+}   */
+.titulos{
+    font-size: 25x;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+   /* margin: 100px;*/
+    
+     /*margin-left: 600px;
+     margin-right: 50px;*/
+     margin-top: 250px;
+    /* margin-bottom: 200px;*/
+}
+.cuadros{
+    font-size: 25x;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+   /* margin: 100px;*/
+    /* margin-left: 25px;*/
+    /* margin-bottom: 200px;*/
+}
+.textoCuadro{
+    text-align: center;
+}
+.resultado{
+    font-size: 40px;
+    color: rgb(243, 247, 246);
+    font-family: cursive;
+   /* margin-left: 500px;*/
+   text-align: center;
+}
+.boton{
+
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: white;
+      background-color: cornflowerblue;
+       border: none;
+        cursor: pointer;
+}

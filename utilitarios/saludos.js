@@ -18,20 +18,3 @@ saludar=function(){
    mostrarTextoEnCaja("txtnombre","")
 }
 
-mostrartexto=function(idComponente,mensaje){
-    let Componente;
-    Componente=document.getElementById(idComponente)
-    Componente.innerText=mensaje;
-
-}
-mostrarimagen=function(idComponente,rutaimagen){
-    let Componente ;
-    Componente=document.getElementById(idComponente);
-    Componente.src = rutaimagen;
-}
-
-mostrarTextoEnCaja=function(idComponente,mensaje){
-    let Componente;
-    Componente=document.getElementById(idComponente);
-    Componente.value = mensaje 
-}

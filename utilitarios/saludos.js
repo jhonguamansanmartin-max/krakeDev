@@ -9,10 +9,18 @@ saludar=function(){
 
    let estatura=recuperarfloat("txtestatura");
 
-   let mensajebienvenida="Bienvenido" +nombre+ "" +apellido;
+   let mensajebienvenida="Bienvenido : " + nombre + " " + apellido;
+
     mostrartexto("lblresultado",mensajebienvenida)
 
    mostrarimagen("imagen","./imagen/saludar.gif")
 
    mostrarTextoEnCaja("txtnombre","")
+}
+
+mostrartexto=function(idComponente,mensaje){
+    let Componente;
+    Componente=document.getElementById(idComponente)
+    Componente.innerText=mensaje;
+
 }

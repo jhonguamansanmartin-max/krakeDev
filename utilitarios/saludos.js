@@ -24,3 +24,10 @@ mostrartexto=function(idComponente,mensaje){
     Componente.innerText=mensaje;
 
 }
+mostrarimakgen=function(idComponente,rutaimagen){
+    let Componente ;
+    Componente=document.getElementById(idComponente);
+    Componente.src = rutaimagen;
+
+
+}

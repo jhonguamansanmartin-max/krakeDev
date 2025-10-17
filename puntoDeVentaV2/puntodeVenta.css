@@ -1,0 +1,114 @@
+body {
+  background-color: black;
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.principal {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(240, 248, 255, 0.9);
+  margin: 100px 80px 0 80px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #001f3f;
+}
+
+.ingresoDatos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+label {
+  flex: 1;
+  font-size: 18px;
+  text-align: right;
+}
+
+input {
+  flex: 2;
+  font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.resultados {
+  flex: 1;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 0 12px 12px 0;
+}
+
+.imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 20px;
+  border-radius: 0 0 12px 12px;
+}
+
+.btnCalcular{
+  padding: 8px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 1s;
+}
+.btnLimpiar{
+  padding: 8px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.btnCalcular:hover {
+  color: white;
+}
+.btnLimpiar:hover {
+  color: white;
+}

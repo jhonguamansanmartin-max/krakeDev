@@ -63,15 +63,23 @@ calcular= function () {
    
 }
  esnotavalida=function(nota,idcomponenteError){
+    let hayErrores=false;
     
     if (isNaN(nota)) {
         mostrarTexto(idcomponenteError, "Debe ingresar un numero")
-        existeError = true;
-        return false;
-    } else {
-        mostrarTexto(idcomponenteError, "")
-        return true;
+        hayErrores = true;
+     
     }
+         if(nota < 0 || nota > 10){
+           mostrarTexto(idcomponenteError, "EL NUMERO DEBE ESTAR ENTRE 0 Y 10 ")
+          hayErrores =  true;
+       
+    }
+
+    if(hayErrores==false){
+        mostrarTexto(idcomponenteError, "");
+    }
+    return !hayErrores
 
  }
 

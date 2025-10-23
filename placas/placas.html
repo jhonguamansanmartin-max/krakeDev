@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <div class="conmtenido">
+        <head>
+            <script src="utilitarios.js"></script>
+            <script src="servicioPlacas.js"></script>
+            <script src="utilitariosCadenas.js"></script>
+            <script src="placas.js"></script>
+            <link href="placas.css" rel="stylesheet"></link>
+        </head>
+        
+            <body>
+                <div class="imagen">
+                    <img src="./imagen/tipos-de-vehiculos-electricos.webp" width="200px">
+                </div>
+            <div class="resultado">
+                <label >Placa : <input type="text" name="Placa" id="txtplaca" placeholder="Ingrese su placa"> </label>
+                    <br><br>
+                <label>la validacion es : </label>
+                    <br><br>
+                <label>Los errores son :<span id="erroresRTA"></span></label>
+                    <br><br>
+             </div>     
+               <div class="botones">     
+                    <input type="button" value="Validar" onclick="validarPlaca()" class="Validar" />
+                    <input type="button" value="limpiar" onclick="limpiar()" class="limpiar"/>
+                </div>
+               
+
+        </body>
+    </div>
+</html>

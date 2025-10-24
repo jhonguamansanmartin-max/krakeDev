@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <div class="conmtenido">
-        <head>
-            <script src="utilitarios.js"></script>
-            <script src="servicioPlacas.js"></script>
-            <script src="utilitariosCadenas.js"></script>
-            <script src="placas.js"></script>
-            <link href="placas.css" rel="stylesheet"></link>
-        </head>
-        
-            <body>
-                <div class="imagen">
-                    <img src="./imagen/tipos-de-vehiculos-electricos.webp" width="200px">
-                </div>
-            <div class="resultado">
-                <label >Placa : <input type="text" name="Placa" id="txtplaca" placeholder="Ingrese su placa"> </label>
-                    <br><br>
-                <label>la validacion es : </label>
-                    <br><br>
-                <label>Los errores son :<span id="erroresRTA"></span></label>
-                    <br><br>
-             </div>     
-               <div class="botones">     
-                    <input type="button" value="Validar" onclick="validarPlaca()" class="Validar" />
-                    <input type="button" value="limpiar" onclick="limpiar()" class="limpiar"/>
-                </div>
-               
+<div class="conmtenido">
 
-        </body>
-    </div>
+    <head>
+        <script src="utilitarios.js"></script>
+        <script src="servicioPlacas.js"></script>
+        <script src="utilitariosCadenas.js"></script>
+        <script src="placas.js"></script>
+        <link href="placas.css" rel="stylesheet">
+        </link>
+    </head>
+
+    <body>
+        <div class="padre">
+            <div class="imagen">
+                <img src="./imagen/tipos-de-vehiculos-electricos.webp" width="200px">
+            </div>
+            <div class="resultado">
+                <label>Placa : <input type="text" name="Placa" id="txtplaca" placeholder="Ingrese su placa"> </label>
+                <br><br>
+                <label>la validacion es : <span id="validacion"></span></label>
+                <br><br>
+                <label>Los errores son :<span id="erroresRTA"></span></label>
+                <br><br>
+            </div>
+            <div class="botones">
+                <input type="button" value="Validar" onclick="validarPlaca()" class="Validar" />
+                <input type="button" value="limpiar" onclick="limpiar()" class="limpiar" />
+            </div>
+        </div>
+        <label> la privincia es :<span id="lblProvincia"></span></label>
+        <br></br>
+        <label>El tipo de vehiculo es: <span id="lblTipoDeVehiculo"></span></label>
+        <br></br>
+        <label> Pico y placa :<span id="lblPicoYPlaca"></span></label>
+
+
+
+
+    </body>
+</div>
+
 </html>

@@ -84,5 +84,4 @@ lanzarDado=function(){
     aleatorioMultiplicado=aleatorio*6;
     aleatorioEntero=parseInt(aleatorioMultiplicado);
     valorDado=aleatorioEntero+1;
-    return valorDado;
-}
+    }

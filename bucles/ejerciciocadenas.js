@@ -37,3 +37,18 @@ invertirCadena = function (cadena) {
     }
     return respuesta
 }
+ 
+buscarlketra=function(cadena,letra){
+    let letraIterada
+    for(let i=0 ; cadena.length;i++)
+        letraIterada=cadena.charAt(i)
+    if(letraIterada==letra){
+       existeLetra=true 
+    }
+    if(existeLetra=true){
+        return true
+
+    }else{
+       return false
+    }
+}

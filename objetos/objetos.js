@@ -1,4 +1,17 @@
+probarIncrementosaldo=function(){
+    let cta={numero:"23424",saldo:34.0}
+    incrementarSaldo(cta,100)
+    console.log(cta.saldo)
+}
+probarDeterminarMayor=function(){
+    let per1={nombre:"Jhon" ,edad:23}
+    let per2={nombre:"Daniel ", edad : 45}
+    let mayor=determinarMayor(per1,per2);
+    if(mayor!=null){
+        console.log("El mayor es :" +mayor.nombre);
+    }
 
+}
 probarAtributos=function(){
     let persona = {
         nombre:"Jhon" ,
@@ -38,4 +51,38 @@ CrearProducto=function(){
     }
     
 
+}
+modificarAtributos=function(){
+    let cuenta={
+        numero: "5323423423",
+        saldo: 0.0
+    }
+    cuenta.saldo=100;
+    cuenta.saldo+=10;
+    console.log(cuenta.saldo)
+}
+crearCliente=function(){
+    let cliente={
+        cedula : "171231",
+        nombre : "Jhon"
+    }
+    let cliente1={};
+    cliente1.nombre="Jhon";
+    cliente1.apellido="Guaman";
+    cliente1.cedula="171231"
+    console.log(cliente1)
+}
+
+incrementarSaldo=function(cuenta,monto){
+    cuenta.saldo+=monto
+}
+
+determinarMayor=function(persona1,persona2){
+    if(persona1.edad>persona2.edad){
+        return persona1;
+    }else if (persona2.edad>persona1.edad){
+        return persona2;
+    }else{
+        return null ;
+    }
 }

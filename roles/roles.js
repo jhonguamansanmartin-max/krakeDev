@@ -3,7 +3,17 @@ let empleados = [
     {cedula:"0914632123",nombre:"Luisa",apellido:"Gonzalez",sueldo:" $ "+ 900.0},
     {cedula:"45556897465",nombre:"Pedro",apellido:"larrea",sueldo:" $ " + 450.0}
 ]
+let esNuevo=false
 
+ejecutarNuevo=function(){
+    habilitarComponente("txtCedula");
+      habilitarComponente("txtNombre");
+        habilitarComponente("txtApellido");
+         habilitarComponente("txtSueldo");
+              habilitarComponente("btnGuardar")
+    esNuevo = true;
+}
+// basico 
 mostrarOpcionEmpleado=function(){
     mostrarComponente("divEmpleado");
     ocultarComponente("divRol")
@@ -11,6 +21,11 @@ mostrarOpcionEmpleado=function(){
 
     mostrarEmpleado()
 
+         deshabilitarComponente("txtCedula")
+              deshabilitarComponente("txtNombre")
+                 deshabilitarComponente("txtApellido")
+                     deshabilitarComponente("txtSueldo")
+                        deshabilitarComponente("btnGuardar")
    }
 mostrarOpcionRol=function(){
     mostrarComponente("divRol")

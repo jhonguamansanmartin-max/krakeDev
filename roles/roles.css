@@ -99,6 +99,7 @@ tbody tr:nth-child(odd) {
   }
   .areaTabla{
     margin-top: 20px;
+    background-color: #217023;
   }
 .estiloBoton:hover {
     background-color:white; 

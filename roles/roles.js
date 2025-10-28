@@ -4,6 +4,31 @@ let empleados = [
     { cedula: "45556897465", nombre: "Pedro", apellido: "larrea", sueldo: " $ " + 450.0 }
 ]
 let esNuevo = false
+
+limpiar=function(){
+    mostrarTextoEnCaja("txtCedula","")
+        mostrarTextoEnCaja("txtNombre" ,"")
+        mostrarTextoEnCaja("txtApellido" ,"")
+        mostrarTextoEnCaja("txtSueldo", "")
+
+    esNuevo=false
+    deshabilitarCajas()
+        
+}
+
+ejecutarBusqueda=function(){
+    let ValorCedula=recuperarTexto("txtBusquedaCedula");
+    let respuesta=buscarEmpleado(ValorCedula);
+    if(respuesta==null){
+        alert("cliente encontrado" + ValorCedula)
+    }else{
+        mostrarTextoEnCaja("txtCedula" , respuesta.cedula)
+        mostrarTextoEnCaja("txtNombre" ,respuesta.nombre)
+        mostrarTextoEnCaja("txtApellido" ,respuesta.apellido)
+        mostrarTextoEnCaja("txtSueldo", respuesta.sueldo)
+        
+    }
+}
 guardar = function () {
     let sinErrores = true;
     let errores = "";

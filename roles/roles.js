@@ -6,17 +6,61 @@ let empleados = [
 let esNuevo = false
 
 buscarPorRol=function(){
-    let valor=recuperarTexto("txtBusquedaCedulaRol");
-    let respuesta= buscarEmpleado(valor);
+    //let valor=recuperarTexto("txtBusquedaCedulaRol");
+   // let respuesta= buscarEmpleado(valor);
 
-    if(respuesta != null){
-     mostrarTextoEnCaja("infoCedula", respuesta.cedula)
-    mostrarTextoEnCaja("txtNombre", respuesta.nombre)
-    mostrarTextoEnCaja("infoSueldo", respuesta.sueldo)
-    
+   // if(respuesta != null){
+    // mostrarTextoEnCaja("infoCedula", respuesta.cedula)
+   // mostrarTextoEnCaja("txtNombre", respuesta.nombre)
+    //mostrarTextoEnCaja("infoSueldo", respuesta.sueldo)
+    buscarPorRol = function () {
+    let cedulaEnRol = recuperarTexto("txtBusquedaCedulaRol");
+    let empleadoRol = buscarEmpleado(cedulaEnRol);
+    if (empleadoRol != null) {
+        mostrarTexto("infoCedula", empleadoRol.cedula);
+        mostrarTexto("infoNombre", empleadoRol.nombre + " " + empleadoRol.apellido);
+        mostrarTexto("infoSueldo", empleadoRol.sueldo);
+    } else {
+        alert("EL EMPLEADO NO EXISTE");
+    }
+}//revisar funcion manana
+calcularAporteEmpleador = function (sueldo) {
+    let aporteEmpleador = sueldo * 11.15 / 100;
+    return aporteEmpleador;
+}
+calcularValorAPagar = function (sueldo, iess, descuento) {
+    let valorCalculado = sueldo - (iess + descuento);
+    return valorCalculado;
+}
+calcularRol = function () {
+    let sueldoRol = recuperarFloatDiv("infoSueldo");
+    let descuentosRol = recuperarFloat("txtDescuentos");
+    if (descuentosRol >= 0 && descuentosRol <= sueldoRol) {
+        let aporteRol = calcularAporteEmpleado(sueldoRol);
+        mostrarTexto("infoIESS", aporteRol.toFixed(2));
 
+        let totalAPagar = calcularValorAPagar(sueldoRol, aporteRol, descuentosRol);
+        mostrarTexto("infoPago", totalAPagar.toFixed(2));
+        habilitarComponente("btnGuardarRol");
+    } else {
+        alert("El descuento debe ser mayor o igual a 0 y menor o igual al sueldo");
     }
 }
+
+
+calcularAporteEmpleado = function (sueldo) {
+    let aporteDelEmpleado = sueldo * 9.45 / 100;
+    return aporteDelEmpleado;
+}
+
+calcularValorAPagar = function (sueldo, iess, descuento) {
+    let valorCalculado = sueldo - (iess + descuento);
+    return valorCalculado;
+}
+
+
+    }
+
 
 
 

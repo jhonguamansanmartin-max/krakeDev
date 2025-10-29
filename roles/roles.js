@@ -4,6 +4,31 @@ let empleados = [
     { cedula: "45556897465", nombre: "Pedro", apellido: "larrea", sueldo: " $ " + 450.0 }
 ]
 let esNuevo = false
+buscarRol = function (cedula) {
+    let elementoRol;
+    let rolIndentificado = null;
+    for (let i = 0; i < roles.length; i++) {
+        elementoRol = roles[i]
+        if (elementoRol.cedula == cedula) {
+            rolIndentificado = elementoRol;
+            break;
+        } else {
+            return null;
+        }
+
+    }
+    return rolIndentificado;
+}
+agregarRol = function (rol) {
+    let rolEnBusqueda = buscarRol(rol.cedula);
+    if (rolEnBusqueda == null) {
+        roles.push(rol);
+        alert("PROCESO REALIZADO CON EXITO");
+    } else {
+        alert("YA EXISTE UN  ROL CON LOS DATOS INGRESADOS");
+    }
+}
+
 
 buscarPorRol=function(){
     //let valor=recuperarTexto("txtBusquedaCedulaRol");

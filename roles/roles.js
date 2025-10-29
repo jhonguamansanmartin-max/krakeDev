@@ -4,6 +4,7 @@ let empleados = [
     { cedula: "45556897465", nombre: "Pedro", apellido: "larrea", sueldo: " $ " + 450.0 }
 ]
 let esNuevo = false
+// completar el html
 buscarRol = function (cedula) {
     let elementoRol;
     let rolIndentificado = null;
@@ -27,6 +28,10 @@ agregarRol = function (rol) {
     } else {
         alert("YA EXISTE UN  ROL CON LOS DATOS INGRESADOS");
     }
+}
+calcularAporteEmpleador = function (sueldo) {
+    let aporteEmpleador = sueldo * 11.15 / 100;
+    return aporteEmpleador;
 }
 
 

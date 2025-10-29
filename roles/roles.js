@@ -5,54 +5,87 @@ let empleados = [
 ]
 let esNuevo = false
 
-limpiar=function(){
-    mostrarTextoEnCaja("txtCedula","")
-        mostrarTextoEnCaja("txtNombre" ,"")
-        mostrarTextoEnCaja("txtApellido" ,"")
-        mostrarTextoEnCaja("txtSueldo", "")
+buscarPorRol=function(){
+    let valor=recuperarTexto("txtBusquedaCedulaRol");
+    let respuesta= buscarEmpleado(valor);
 
-    esNuevo=false
-    deshabilitarCajas()
-        
+    if(respuesta != null){
+     mostrarTextoEnCaja("infoCedula", respuesta.cedula)
+    mostrarTextoEnCaja("txtNombre", respuesta.nombre)
+    mostrarTextoEnCaja("infoSueldo", respuesta.sueldo)
+    
+
+    }
 }
 
-ejecutarBusqueda=function(){
-    let ValorCedula=recuperarTexto("txtBusquedaCedula");
-    let respuesta=buscarEmpleado(ValorCedula);
-    if(respuesta==null){
+
+
+
+
+
+
+
+
+
+
+
+
+///// funciones empleado 
+limpiar = function () {
+    mostrarTextoEnCaja("txtCedula", "")
+    mostrarTextoEnCaja("txtNombre", "")
+    mostrarTextoEnCaja("txtApellido", "")
+    mostrarTextoEnCaja("txtSueldo", "")
+
+    esNuevo = false
+    deshabilitarCajas()
+
+}
+
+ejecutarBusqueda = function () {
+    let ValorCedula = recuperarTexto("txtBusquedaCedula");
+    let respuesta = buscarEmpleado(ValorCedula);
+    if (respuesta == null) {
         alert("cliente encontrado" + ValorCedula)
-    }else{
-        mostrarTextoEnCaja("txtCedula" , respuesta.cedula)
-        mostrarTextoEnCaja("txtNombre" ,respuesta.nombre)
-        mostrarTextoEnCaja("txtApellido" ,respuesta.apellido)
+    } else {
+        mostrarTextoEnCaja("txtCedula", respuesta.cedula)
+        mostrarTextoEnCaja("txtNombre", respuesta.nombre)
+        mostrarTextoEnCaja("txtApellido", respuesta.apellido)
         mostrarTextoEnCaja("txtSueldo", respuesta.sueldo)
-        
+
     }
 }
 guardar = function () {
     let sinErrores = true;
     let errores = "";
-    let valorCedula = habilitarComponente("txtCedula");
-    let valorNombre = habilitarComponente("txtNombre");
-    let valorApellido = habilitarComponente("txtApellido");
-    let valorSueldo  = habilitarComponente("txtSueldo");
-//cedula
-    if(valorCedula.length != 10){
-        errores +=  "Deben ser 10 caracteres";
-        sinErrores=false
+    let valorCedula = recuperarTexto("txtCedula")
+    let valorNombre = recuperarTexto("txtNombre")
+    let valorApellido = recuperarTexto("txtApellido")
+    let valorSueldo = recuperarFloat("txtSueldo")
+    console.log(valorCedula)
+    console.log(valorNombre)
+    console.log(valorApellido)
+    console.log(valorSueldo)
+
+    //cedula
+    if (valorCedula.length != 10) {
+        errores += "Deben ser 10 caracteres";
+        sinErrores = false
+
     }
-    for(i=0 ; i<valorCedula.length ; i++){
-        if(isNaN(valorCedula[i])){
-            errores +=  "Todos los caracteres deben ser digitos";
-            sinErrores=false;
+    
+    for (i = 0; i < valorCedula.length; i++) {
+        if (isNaN(valorCedula[i])) {
+            errores += "Todos los caracteres deben ser digitos";
+            sinErrores = false;
             break;
         }
     }
-    if(sinErrores==false){
+    if (sinErrores == false) {
         mostrarTexto("lblErrorCedula", errores)
-        errores="";
+        errores = "";
     }
-       //validacion para nombre
+    //validacion para nombre
     if (valorNombre.length < 3) {
         errores += "Debe ingresar al menos tres caracteres. ";
         sinErrores = false;
@@ -123,7 +156,7 @@ guardar = function () {
             let nuevoEmpleado = agregarEmpleado(empleado);
             if (nuevoEmpleado) {
                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
-                mostrarEmpleados();
+                mostrarEmpleado();
                 deshabilitarCajas();
                 esNuevo = false;
             } else {
@@ -136,7 +169,7 @@ guardar = function () {
             empleadoModificado.sueldo = valorSueldo;
 
             alert("EMPLEADO MODIFICADO EXITOSAMENTE");
-            mostrarEmpleados();
+            mostrarEmpleado();
             deshabilitarCajas();
         }
     }
